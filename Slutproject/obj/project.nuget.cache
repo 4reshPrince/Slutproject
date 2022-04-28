@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "1ZNe7s1RsabVukA7RJkqT4BUvofZTIrwGuk7+C7aTtaI+Z0H5UNbA+v7/6OZkN1aus+T5eLNIpG9RlM2XpsyGw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\torell.jordan\\Documents\\Programering\\Slutproject\\Slutproject\\Slutproject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\torell.jordan\\.nuget\\packages\\raylib-cs\\4.0.0.1\\raylib-cs.4.0.0.1.nupkg.sha512",
+    "C:\\Users\\torell.jordan\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
