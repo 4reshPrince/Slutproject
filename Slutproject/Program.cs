@@ -16,8 +16,6 @@ Texture2D settingImage = Raylib.LoadTexture("mapping-menu.png");
 Texture2D startImage = Raylib.LoadTexture("Capture.png");
 Texture2D outImage = Raylib.LoadTexture("outside.PNG");
 
-Rectangle playRect = new Rectangle(290, 375, 198, 80);
-Rectangle settingRect = new Rectangle(306, 469, 168, 57);
 Rectangle backRect = new Rectangle(8, 6, 60, 60);
 
 
@@ -75,46 +73,26 @@ while (!Raylib.WindowShouldClose())
     if (level == "menu")
     {
 
-        Raylib.DrawTexture(menuImage, 0, 0, Color.WHITE);
-
-        // Kolla om positionen är inuti rektangeln && musknappen är nedtryckt
-        if(Raylib.CheckCollisionPointRec(mousePos, playRect))
-        {
-            
-            if (Raylib.IsMouseButtonPressed(MouseButton.MOUSE_BUTTON_LEFT))
-            {
-                level = "start";
-            }
-        }
-        else if (Raylib.CheckCollisionPointRec(mousePos, settingRect))
-        {
-
-            if (Raylib.IsMouseButtonPressed(MouseButton.MOUSE_BUTTON_LEFT))
-            {
-                level = "setting";
-            }
-        }
-
-        // Om det stämmer...?
+        level = Screens.MainMenuChoice(menuImage, mousePos, level);
 
     }
 
-     else if (level == "setting")
+    else if (level == "setting")
     {
 
         Raylib.DrawTexture(settingImage, 0, 0, Color.WHITE);
 
         // Kolla om positionen är inuti rektangeln && musknappen är nedtryckt
-        if(Raylib.CheckCollisionPointRec(mousePos, backRect))
+        if (Raylib.CheckCollisionPointRec(mousePos, backRect))
         {
-            
+
             if (Raylib.IsMouseButtonPressed(MouseButton.MOUSE_BUTTON_LEFT))
             {
                 level = "menu";
             }
         }
 
-        
+
     }
 
     else if (level == "start")
@@ -166,7 +144,7 @@ while (!Raylib.WindowShouldClose())
         playerRect = OutsideColl.CheckCollisionX(wallRect, playerRect, movement);
 
 
-        
+
         playerRect.y += movement.Y;
 
         // Gör så att det finns väggar med collision i Y-axeln
@@ -306,3 +284,4 @@ static Vector2 ReadMovement(float speed)
 
     return movement;
 }
+
