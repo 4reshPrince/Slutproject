@@ -99,7 +99,7 @@ while (!Raylib.WindowShouldClose())
 
     }
 
-    if (level == "setting")
+     else if (level == "setting")
     {
 
         Raylib.DrawTexture(settingImage, 0, 0, Color.WHITE);
@@ -117,7 +117,7 @@ while (!Raylib.WindowShouldClose())
         
     }
 
-    if (level == "start")
+    else if (level == "start")
     {
         Raylib.DrawTexture(startImage, 0, 0, Color.WHITE);
 
@@ -152,7 +152,7 @@ while (!Raylib.WindowShouldClose())
 
     }
 
-    if (level == "sec")
+    else if (level == "sec")
     {
         Raylib.DrawTexture(outImage, 0, 0, Color.WHITE);
 
@@ -185,7 +185,7 @@ while (!Raylib.WindowShouldClose())
         }
     }
 
-    if (level == "third")
+    else if (level == "third")
     {
         Raylib.DrawTexture(startImage, 0, 0, Color.WHITE);
 
