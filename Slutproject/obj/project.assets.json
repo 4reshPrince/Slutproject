@@ -124,11 +124,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\torell.jordan\\Documents\\Programering\\Slutproject\\Slutproject\\Slutproject.csproj",
+      "projectUniqueName": "C:\\Users\\torell.jordan\\Documents\\Programering\\Slutproject\\Slutproject\\Slutproject.csproj",
       "projectName": "Slutproject",
-      "projectPath": "c:\\Users\\torell.jordan\\Documents\\Programering\\Slutproject\\Slutproject\\Slutproject.csproj",
+      "projectPath": "C:\\Users\\torell.jordan\\Documents\\Programering\\Slutproject\\Slutproject\\Slutproject.csproj",
       "packagesPath": "C:\\Users\\torell.jordan\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\torell.jordan\\Documents\\Programering\\Slutproject\\Slutproject\\obj\\",
+      "outputPath": "C:\\Users\\torell.jordan\\Documents\\Programering\\Slutproject\\Slutproject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\torell.jordan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -175,7 +175,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

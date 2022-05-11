@@ -32,4 +32,23 @@ public class Screens
 
         return level;
     }
+
+    public static string SettingScreen(Texture2D settingImage, Vector2 mousePos, string level)
+    {
+        Rectangle backRect = new Rectangle(8, 6, 60, 60);
+
+        Raylib.DrawTexture(settingImage, 0, 0, Color.WHITE);
+
+        // Kolla om positionen är inuti rektangeln && musknappen är nedtryckt
+        if (Raylib.CheckCollisionPointRec(mousePos, backRect))
+        {
+
+            if (Raylib.IsMouseButtonPressed(MouseButton.MOUSE_BUTTON_LEFT))
+            {
+                level = "menu";
+            }
+        }
+
+        return level;
+    }
 }

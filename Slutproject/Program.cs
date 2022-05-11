@@ -16,8 +16,6 @@ Texture2D settingImage = Raylib.LoadTexture("mapping-menu.png");
 Texture2D startImage = Raylib.LoadTexture("Capture.png");
 Texture2D outImage = Raylib.LoadTexture("outside.PNG");
 
-Rectangle backRect = new Rectangle(8, 6, 60, 60);
-
 
 
 // Väggarnas plasering och position
@@ -26,12 +24,10 @@ List<Rectangle> wallRects = Walls.MakeWalls();
 List<Rectangle> wallRect = Walls.MakeWall();
 
 
-
 Rectangle door = new Rectangle(379, 595, 41, 6);
 Rectangle door1 = new Rectangle(142, 207, 39, 3);
 Rectangle door2 = new Rectangle(582, 207, 38, 3);
 Rectangle door3 = new Rectangle(379, 595, 41, 6);
-
 
 bool undoX = false;
 bool undoY = false;
@@ -80,18 +76,7 @@ while (!Raylib.WindowShouldClose())
     else if (level == "setting")
     {
 
-        Raylib.DrawTexture(settingImage, 0, 0, Color.WHITE);
-
-        // Kolla om positionen är inuti rektangeln && musknappen är nedtryckt
-        if (Raylib.CheckCollisionPointRec(mousePos, backRect))
-        {
-
-            if (Raylib.IsMouseButtonPressed(MouseButton.MOUSE_BUTTON_LEFT))
-            {
-                level = "menu";
-            }
-        }
-
+        level = Screens.SettingScreen(settingImage, mousePos, level);
 
     }
 
@@ -104,29 +89,15 @@ while (!Raylib.WindowShouldClose())
         playerRect.x += movement.X;
 
         // Gör så att det finns väggar med collision i X-axeln
-
         playerRect = Collisions.CheckCollisionX(wallRects, playerRect, movement);
-
-
 
         playerRect.y += movement.Y;
 
         // Gör så att det finns väggar med collision i Y-axeln
-
         playerRect = Collisions.CheckCollisionY(wallRects, playerRect, movement);
 
-
-
         // Gör så att man inte kan gå utanför bilden i både X och Y axeln
-
-        if (playerRect.x < 0 || playerRect.x + playerRect.width > Raylib.GetScreenWidth())
-        {
-            undoX = true;
-        }
-        if (playerRect.y < 0 || playerRect.y + playerRect.height > Raylib.GetScreenHeight())
-        {
-            undoY = true;
-        }
+        (undoX, undoY) = OffLimit.Limits(playerRect, undoX, undoY);
 
     }
 
@@ -136,31 +107,19 @@ while (!Raylib.WindowShouldClose())
 
         movement = ReadMovement(speed);
 
-
         playerRect.x += movement.X;
 
         // Gör så att det finns väggar med collision i X-axeln
-
         playerRect = OutsideColl.CheckCollisionX(wallRect, playerRect, movement);
-
-
 
         playerRect.y += movement.Y;
 
         // Gör så att det finns väggar med collision i Y-axeln
-
         playerRect = OutsideColl.CheckCollisionY(wallRect, playerRect, movement);
 
+        // Gör så att man inte kan gå utanför bilden i både X och Y axeln
+        (undoX, undoY) = OffLimit.Limits(playerRect, undoX, undoY);
 
-
-        if (playerRect.x < 0 || playerRect.x + playerRect.width > Raylib.GetScreenWidth())
-        {
-            undoX = true;
-        }
-        if (playerRect.y < 0 || playerRect.y + playerRect.height > Raylib.GetScreenHeight())
-        {
-            undoY = true;
-        }
     }
 
     else if (level == "third")
@@ -171,18 +130,11 @@ while (!Raylib.WindowShouldClose())
 
         playerRect.x += movement.X;
 
-
         playerRect.y += movement.Y;
 
+        // Gör så att man inte kan gå utanför bilden i både X och Y axeln
+        (undoX, undoY) = OffLimit.Limits(playerRect, undoX, undoY);
 
-        if (playerRect.x < 0 || playerRect.x + playerRect.width > Raylib.GetScreenWidth())
-        {
-            undoX = true;
-        }
-        if (playerRect.y < 0 || playerRect.y + playerRect.height > Raylib.GetScreenHeight())
-        {
-            undoY = true;
-        }
     }
 
     if (level == "start")
@@ -203,13 +155,13 @@ while (!Raylib.WindowShouldClose())
             playerRect.x = 385;
             playerRect.y = 540;
         }
-
+        
         if (Raylib.CheckCollisionRecs(playerRect, door2))
         {
             level = "third";
             playerRect.x = 385;
             playerRect.y = 540;
-        }
+        }      
     }
 
     if (level == "third")
@@ -247,7 +199,7 @@ while (!Raylib.WindowShouldClose())
 
         }
 
-        // Raylib.DrawRectangleRec(doorRect, Color.BLUE);
+        // Raylib.DrawRectangleRec(door, Color.BLUE);
     }
 
     if (level == "sec")
@@ -284,4 +236,3 @@ static Vector2 ReadMovement(float speed)
 
     return movement;
 }
-
