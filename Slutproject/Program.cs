@@ -1,7 +1,7 @@
 ﻿using System;
-global using Raylib_cs;
 using System.Collections.Generic;
 using System.Numerics;
+using Raylib_cs;
 
 Raylib.InitWindow(800, 600, "2D-topdown game");
 Raylib.SetTargetFPS(60);
