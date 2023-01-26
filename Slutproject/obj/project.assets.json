@@ -8,10 +8,14 @@
           "System.Numerics.Vectors": "4.5.0"
         },
         "compile": {
-          "lib/net5.0/Raylib-cs.dll": {}
+          "lib/net5.0/Raylib-cs.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net5.0/Raylib-cs.dll": {}
+          "lib/net5.0/Raylib-cs.dll": {
+            "related": ".xml"
+          }
         },
         "runtimeTargets": {
           "runtimes/linux-x64/native/libraylib.so": {
@@ -166,7 +170,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -175,7 +180,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

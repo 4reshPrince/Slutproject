@@ -3,7 +3,6 @@ C:\Users\torell.jordan\Documents\Programering\Slutproject\Slutproject\bin\Debug\
 C:\Users\torell.jordan\Documents\Programering\Slutproject\Slutproject\bin\Debug\net5.0\Slutproject.runtimeconfig.json
 C:\Users\torell.jordan\Documents\Programering\Slutproject\Slutproject\bin\Debug\net5.0\Slutproject.runtimeconfig.dev.json
 C:\Users\torell.jordan\Documents\Programering\Slutproject\Slutproject\bin\Debug\net5.0\Slutproject.dll
-C:\Users\torell.jordan\Documents\Programering\Slutproject\Slutproject\bin\Debug\net5.0\ref\Slutproject.dll
 C:\Users\torell.jordan\Documents\Programering\Slutproject\Slutproject\bin\Debug\net5.0\Slutproject.pdb
 C:\Users\torell.jordan\Documents\Programering\Slutproject\Slutproject\bin\Debug\net5.0\Raylib-cs.dll
 C:\Users\torell.jordan\Documents\Programering\Slutproject\Slutproject\bin\Debug\net5.0\runtimes\linux-x64\native\libraylib.so
@@ -20,3 +19,4 @@ C:\Users\torell.jordan\Documents\Programering\Slutproject\Slutproject\obj\Debug\
 C:\Users\torell.jordan\Documents\Programering\Slutproject\Slutproject\obj\Debug\net5.0\ref\Slutproject.dll
 C:\Users\torell.jordan\Documents\Programering\Slutproject\Slutproject\obj\Debug\net5.0\Slutproject.pdb
 C:\Users\torell.jordan\Documents\Programering\Slutproject\Slutproject\obj\Debug\net5.0\Slutproject.genruntimeconfig.cache
+C:\Users\torell.jordan\Documents\Programering\Slutproject\Slutproject\obj\Debug\net5.0\refint\Slutproject.dll
